@@ -13,9 +13,43 @@ struct estudiante
     float nota;
     //Dentro de la estructura se asigna las diferente variables que se van a utilizar
 
-} alumno[];
+} alumno;
 //Se crea la estructura de los alumnos
 
+void ingreso() {
+
+        printf("-Ingrese la matricula del estudiante-\n");
+        scanf("%d", &alumno.matricula);
+        //Ingreso tipo entero de la matricula dentro de la estructura alumno
+        fflush(stdin);
+        //Se limpia el buffer para no tener problemas al ingresar los datos
+
+        printf("-Ingrese el nombre del estudiante-\n");
+        gets(alumno.nombre);
+        //Ingreso del nombre del estudiante mediante la funcion gets en la estructura alumno
+        fflush(stdin);
+        //Se limpia el buffer para no tener problemas al ingresar los datos
+
+        printf("-Ingrese la direcion del estudiante-\n");
+        gets(alumno.direccion);
+        //Ingreso de la direccion del estudiante mediante la funcion gets en la estructura alumno
+        fflush(stdin);
+        //Se limpia el buffer para no tener problemas al ingresar los datos
+
+        printf("-Ingrese la materia del estudiante-\n");
+        gets(alumno.materia);
+        //Ingreso de la materia del estudiante mediante la funcion gets en la estructura alumno
+        fflush(stdin);
+        //Se limpia el buffer para no tener problemas al ingresar los datos
+
+        printf("-Ingrese la nota del estudiante-\n");
+        scanf("%f", &alumno.nota);
+        //Ingreso de tipo flotante de la nota del estudiante de la estructura del alumno
+        fflush(stdin);
+        //Se limpia el buffer para no tener problemas al ingresar los datos
+
+}
+//Funcion "ingreso" para ingresar las veces que sea, los estudiantes y sus diferentes datos: matricula, nombre,etc.
 
 
 int main () {
@@ -33,7 +67,7 @@ int main () {
         {
         case 1:
             printf ("-Ingreso de estudiantes-\n");
-
+            ingreso();
             break;
 
         case 2:
@@ -50,7 +84,7 @@ int main () {
             break;
         }
     } while (boton != 3);
-    
+    //Creacion del menu con bucle dowhile hasta que el usuario oprima el numero 3, ademas se implemento la funcion switch para el muestreo y adicion de datos de los estudiantes
 
 
 
